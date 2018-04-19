@@ -1,0 +1,11 @@
+-Problema 01
+
+Se desea leer cada caso de prueba del archivo de texto donde se almacenan.
+
+-Diseño
+
+Iterar a travez de cada linea del archivo del archivo de casos de prueba usando un ciclo while con el objeto system.IOStream Reader
+
+-Solución
+
+Actividad para alumno
