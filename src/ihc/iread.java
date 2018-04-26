@@ -40,10 +40,10 @@ public class iread {
         BufferedReader b = new BufferedReader(f);
         while((cadena = b.readLine())!=null) {
             
-            if(cadena.contains(Chtml)){
+            if(cadena.contains("<!--")){
             contHTML++;
             }
-            if(cadena.contains(Capli) || cadena.contains("/*"))  {
+            if(cadena.contains("//") || cadena.contains("/*"))  {
              contA++;
             }
             if(cadena.contains("@")){
@@ -116,21 +116,8 @@ public class iread {
 
     public static void main(String[] args) throws IOException {
          System.out.println("----------P1");
-        muestraContenido("C:/Users/Leyaim/Desktop/estadoarte/panningforgold-master/01.html");
-        System.out.println("----------P2");
-         muestraContenido("C:/Users/Leyaim/Desktop/estadoarte/panningforgold-master/02.html");
-         System.out.println("----------P3");
-         muestraContenido("C:/Users/Leyaim/Desktop/estadoarte/panningforgold-master/03.html");
-         
-         System.out.println("----------P4");
-         muestraContenido("C:/Users/Leyaim/Desktop/estadoarte/panningforgold-master/04.html");
-         
-         System.out.println("----------P5");
-         muestraContenido("C:/Users/Leyaim/Desktop/estadoarte/panningforgold-master/05.html");
-         System.out.println("----------P6");
-         muestraContenido("C:/Users/Leyaim/Desktop/estadoarte/panningforgold-master/06.html");
-         
-         
+        muestraContenido("C:\\Users\\Leyaim\\Desktop\\estadoarte\\panningforgold-master");
+        
          
   
     }
