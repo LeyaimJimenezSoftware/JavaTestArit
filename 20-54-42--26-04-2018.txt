@@ -1,0 +1,10 @@
+000100020003
+
+[32m: Éxito 4.66 Resultado esperado 4.66
+
+
+[31m: Fallo 3.0 Resultado esperado 3.05
+
+
+[32m: Éxito 10.5 Resultado esperado 10.50
+

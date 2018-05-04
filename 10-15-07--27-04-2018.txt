@@ -1,0 +1,41 @@
+0001000200030004000500060007000800090010001100120013
+
+ Fallo 4.66 Resultado esperado 4.6667
+
+
+ Éxito 3.0 Resultado esperado 3.0000
+
+
+ Éxito 10.5 Resultado esperado 10.5000
+
+
+ Fallo 1.0 Resultado esperado 6.6569
+
+
+ Éxito 0.0 Resultado esperado 0.0000
+
+
+ Fallo 1.0 Resultado esperado 4.0000
+
+
+ Fallo 3.42 Resultado esperado 3.4286
+
+
+ Éxito 3.0 Resultado esperado 3.0000
+
+
+ Fallo 5.5 Resultado esperado 0.0000
+
+
+
+
+
+ Éxito 0.0 Resultado esperado 0.0000
+
+
+ Éxito 0.0 Resultado esperado 0.0000
+
+
+ Fallo 0.0 Resultado esperado 3.0320
+
+Tiempo de ejecución en milisegundos: 62

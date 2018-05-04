@@ -1,0 +1,41 @@
+0001000200030004000500060007000800090010001100120013
+
+[01;31m Fallo.[00;00m4.66 Resultado esperado 4.6667
+
+
+ Éxito 3.0 Resultado esperado 3.0000
+
+
+ Éxito 10.5 Resultado esperado 10.5000
+
+
+[01;31m Fallo.[00;00m5.65 Resultado esperado 6.6569
+
+
+ Éxito 0.0 Resultado esperado 0.0000
+
+
+[01;31m Fallo.[00;00m3.99 Resultado esperado 4.0000
+
+
+ Metodo no encontrado
+
+
+ Metodo no encontrado
+
+
+[01;31m Fallo.[00;00m5.5 Resultado esperado 0.0000
+
+
+ Exception  Resultado esperado Exception
+
+
+ Éxito 0.0 Resultado esperado 0.0000
+
+
+ Éxito 0.0 Resultado esperado 0.0000
+
+
+ Metodo no encontrado
+
+Tiempo de ejecución en milisegundos: 42

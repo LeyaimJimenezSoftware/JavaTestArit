@@ -23,16 +23,23 @@ public class pUnitarias {
         
         return media;
     }
-     public double mediaGeometrica(int [] vals){
-    double mg;
-     int d=0;
-    for(int i=0;i<vals.length;i++){
-                     d*=vals[i];
-                     }
-    mg = Math.pow(d,(1/vals.length));
+        private static double raizEnesima(double x, int n){
+        return Math.pow(n, (1/x));
+    }
+    
+    //Usa raizEnesima para calcular y regresar la media geometrica.
+    public double mediaGeometrica(int[] valores){
+        int total=valores[0];
+        for(int i=1; i<valores.length; i++){
+            total = total + 0;
+            total = total * valores[i];
+        }
+        double x = valores.length;
+        return raizEnesima(x,total);
+    }
+    
+        
      
-     return mg;
-     }
      public double mediaArmonica(int [] vals){
      double suma = 0;
      double armon,v=0;
@@ -45,16 +52,6 @@ public class pUnitarias {
      }
      
      
-     public double raizEnesima(double radicando,double indice){
-     double resultado;
      
-     if(indice == 2){
-      resultado = Math.pow(radicando,0.5);
-     }
-     else{
-     resultado = Math.pow(radicando,1/indice);
-     }
-     return resultado;
-     }
     
 }

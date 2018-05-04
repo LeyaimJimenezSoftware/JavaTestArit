@@ -16,34 +16,15 @@ import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author Leyaim
  */
-public class Validado {
-      public static void main(String[] args) {
-        
-          
-          boolean found = false;
-          boolean mArmonica = false;
-           long TInicio, TFin, tiempo;
-           TInicio = System.currentTimeMillis(); //de ejecución
-           java.util.Date fecha = new Date();
-              String fechaw = ""+fecha;
-              DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
-              DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        
-             DateFormat hourdateFormat = new SimpleDateFormat("HH-mm-ss--dd-MM-yyyy");
-             System.out.println("Hora y fecha: "+hourdateFormat.format(fecha));
-             String time = "";
-             time =""+hourdateFormat.format(fecha);
-             
-          
-          
-         String direccion = "C:\\Users\\Leyaim\\Desktop\\estadoarte\\problema2.txt";
+public class examen {
+     public static void main(String[] args){
+    
+        String direccion = "C:\\Users\\Leyaim\\Desktop\\estadoarte\\examen.txt";
         String cadena = "";
         
         //Leer un archivo .txt
@@ -62,18 +43,8 @@ public class Validado {
         
         
            
-           try{
-                     
-        
-            FileWriter fw=new FileWriter(time+".txt");
-            
-            BufferedWriter bw = new BufferedWriter(fw); 
-            PrintWriter wr = new PrintWriter(bw); 
-            
-             wr.println(); 
-        
-        //En caso de si encontrar el archivo.
-        
+           
+                            
         
         try {
             while((cadena = file2.readLine()) != null) {
@@ -93,23 +64,21 @@ public class Validado {
                 }
                 
                 double res = 0;
-                pUnitarias pruebas = new pUnitarias();
-                
+              
+                Banco pBanco = new Banco();
                 //Hace la operacion correspondiente.
                 switch(arrayRenglon[1]){
-                    case "mediaAritmetica":
-                        res = (pruebas.mediaAritmetica(arrayNum));
+                    case "Retirar":
+                        res = (pBanco.Retirar(arrayNum[1],arrayNum[2]));
                     break;
-                    case "mediaGeometrica":
-                        res = pruebas.mediaGeometrica(arrayNum);
-                    break;
+                    
 //                    case "mediaArmonica":
 //                        mArmonica =false;
 //                      //res = pruebas.mediaArmonica(arrayNum);
 //                    break;
                     default:
                         res = 0;
-                        found = true;
+                      //  found = true;
                        // continua = false;
                     break;
                 }
@@ -123,9 +92,9 @@ public class Validado {
             
             //Cierro el stream
             
-                wr.println(); 
+                 
                 System.out.print(arrayRenglon[0]);
-                fw.write(""+arrayRenglon[0]);   
+              ;   
                 if( arrayRenglon.length == 4){
                     res = Math.floor(100 * res) / 100;
                     try{
@@ -137,53 +106,40 @@ public class Validado {
 //                                  wr.write(" Metodo no encontrado");
 //                            
 //                        }
-                        if(found == true){
-                        
-                            System.out.print(" Metodo no encontrado");
-                        
-                            wr.write(" Metodo no encontrado");
-                            
-                            found = false;
-                        }
                        
-                        else if(res == Double.parseDouble(arrayRenglon[3])){
+                            
+                       if(res == Double.parseDouble(arrayRenglon[3])){
                             
                             
                             System.out.print(((char)27+"[01;32m Exito."+(char)27+"[00;00m")+" Éxito " + res +   " Resultado esperado " + arrayRenglon[3]);
                         
-                            wr.write(" Éxito " + res + " Resultado esperado " + arrayRenglon[3]);
+                           
                         }else {
                             System.out.println((char)27+"[01;31m Fallo."+(char)27+"[00;00m" + res + " Resultado esperado " + arrayRenglon[3]);
-                            wr.write((char)27+"[01;31m Fallo."+(char)27+"[00;00m"  + res + " Resultado esperado " + arrayRenglon[3]);
+                           
                         }
                     } catch (NumberFormatException nfe){
                         System.out.print(" Fallo " +res+ " Resultado esperado " + arrayRenglon[3]);
                         
-                            wr.write(" Exception "  + " Resultado esperado " + arrayRenglon[3]);
+                            
                     }
                 }
                 
                 System.out.println("\n");
-                wr.write("\n");
+           
                  System.out.println("");
                  
-                  wr.println(); 
+     
                 // fw.close();
                
             }
                
-                TFin = System.currentTimeMillis();
-                tiempo = TFin - TInicio;
-                System.out.println("Tiempo de ejecución en milisegundos: " + tiempo);
-                  wr.write("Tiempo de ejecución en milisegundos: " + tiempo);
-                  wr.println();
-                  wr.close();
+              
+               
         } catch (IOException e) {
             System.out.println("Error");
         }
-         }catch(IOException e){
-            System.out.println("Error E/S: "+e);
-        }
+    
           
            
     }
